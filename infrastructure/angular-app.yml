@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: This
+# Parameters:
+#   EnvironmentName:
+#     Type: String
+#     Description: this
+#     MinLength: 2
+#     MaxLength: 48
+#     AllowedPattern: ^[a-z]*$
+#     ConstraintDescription: Environment name must be lowercase characters only.
+Resources:
+  AngularAppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      # BucketName: mmenard-angular-devops-${EnvironmentName}
+      BucketName: mmenard-angular-devops-prod
+      Tags:
+        - Key: ApplicationName
+          Value: AngularDevOps
+        - Key: Company
+          Value: MeMyself
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt [AngularAppBucket, WebsiteURL]
+    Description: This description
