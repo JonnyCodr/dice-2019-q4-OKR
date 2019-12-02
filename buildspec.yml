@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build:ci
+
+artifacts:
+  files:
+    - "**/*.hmtl"
+    - "**/*.js"
+    - "**/*.css"
+    - "**/*.ico"
+  discard-paths: yes
+  base-directory: "dist/angular-demo-app"
