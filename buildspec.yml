@@ -9,7 +9,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build:ci
+      - npm run build
 
 artifacts:
   files:
@@ -18,4 +18,4 @@ artifacts:
     - "**/*.css"
     - "**/*.ico"
   discard-paths: yes
-  base-directory: "dist/angular-demo-app"
+  base-directory: "dist/demo-app"
