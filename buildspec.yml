@@ -12,7 +12,7 @@ phases:
       - npm run build --prod
   post_build:
     commands:
-      - echo Nothing to see here (post build)
+      - echo Nothing to see here...in post build
 
 artifacts:
   files:
