@@ -9,17 +9,16 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build --prod
+      - ng build --prod
   post_build:
     commands:
-      - echo Nothing to see here...in post build
-
-artifacts:
-  files:
-    - "assets/*.json"
-    - "**/*.hmtl"
-    - "**/*.js"
-    - "**/*.css"
-    - "**/*.ico"
-  discard-paths: yes
-  base-directory: "dist/angular-d3"
+      - aws s3 sync ./dist/angular-d3 s3://angular-devops-prod --acl 'public-read' --delete
+# artifacts:
+#   files:
+#     - "assets/*.json"
+#     - "**/*.hmtl"
+#     - "**/*.js"
+#     - "**/*.css"
+#     - "**/*.ico"
+#   discard-paths: yes
+#   base-directory: "dist/angular-d3"
