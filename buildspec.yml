@@ -12,7 +12,7 @@ phases:
       - npm build --prod
   post_build:
     commands:
-      - aws s3 sync ./dist/angular-d3 s3://angular-devops-prod --acl 'public-read' --delete
+      - aws s3 sync dist/angular-d3 s3://angular-devops-prod --acl 'public-read' --delete
 # artifacts:
 #   files:
 #     - "assets/*.json"
