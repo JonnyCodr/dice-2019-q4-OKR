@@ -1,13 +1,13 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
 Description: This
-# Parameters:
-#   EnvironmentName:
-#     Type: String
-#     Description: this
-#     MinLength: 2
-#     MaxLength: 48
-#     AllowedPattern: ^[a-z]*$
+Parameters:
+  EnvironmentName:
+    Type: String
+    Description: this
+    MinLength: 2
+    MaxLength: 48
+    AllowedPattern: ^[a-z]*$
 #     ConstraintDescription: Environment name must be lowercase characters only.
 Resources:
   AngularAppBucket:

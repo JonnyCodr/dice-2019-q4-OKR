@@ -12,4 +12,13 @@ phases:
       - npm run build --prod
   post_build:
     commands:
-      - aws s3 sync ./dist/angular-d3 s3://angular-devops-prod --acl 'public-read' --delete
+      - aws s3 sync ./dist/angular-d3 s3://mmenard-angular-devops-prod --acl 'public-read' --delete
+# artifacts:
+#   files:
+#     - "assets/*.json"
+#     - "**/*.hmtl"
+#     - "**/*.js"
+#     - "**/*.css"
+#     - "**/*.ico"
+#   discard-paths: yes
+#   base-directory: "dist/angular-d3"
