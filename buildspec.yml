@@ -16,6 +16,7 @@ phases:
 
 artifacts:
   files:
+    - "assets/*.json"
     - "**/*.hmtl"
     - "**/*.js"
     - "**/*.css"
