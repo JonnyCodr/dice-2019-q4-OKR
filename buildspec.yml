@@ -9,7 +9,7 @@ phases:
       - npm install
   build:
     commands:
-      - ng build --prod
+      - npm build --prod
   post_build:
     commands:
       - aws s3 sync ./dist/angular-d3 s3://angular-devops-prod --acl 'public-read' --delete
