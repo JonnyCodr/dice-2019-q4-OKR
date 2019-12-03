@@ -15,7 +15,7 @@ export class BarChartComponent implements OnChanges {
   @Input()
   data: DataModel[];
 
-  margin = {top: 20, right: 20, bottom: 30, left: 40};
+  margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
   constructor() { }
 
@@ -25,7 +25,7 @@ export class BarChartComponent implements OnChanges {
     this.createChart();
   }
 
-  onResize() {
+  onResize(event) {
     this.createChart();
   }
 
@@ -36,8 +36,8 @@ export class BarChartComponent implements OnChanges {
     const data = this.data;
 
     const svg = d3.select(element).append('svg')
-        .attr('width', element.offsetWidth)
-        .attr('height', element.offsetHeight);
+      .attr('width', element.offsetWidth)
+      .attr('height', element.offsetHeight);
 
     const contentWidth = element.offsetWidth - this.margin.left - this.margin.right;
     const contentHeight = element.offsetHeight - this.margin.top - this.margin.bottom;
@@ -65,19 +65,19 @@ export class BarChartComponent implements OnChanges {
       .attr('class', 'axis axis--y')
       .call(d3.axisLeft(y).ticks(10, '%'))
       .append('text')
-        .attr('transform', 'rotate(-90)')
-        .attr('y', 6)
-        .attr('dy', '0.71em')
-        .attr('text-anchor', 'end')
-        .text('Frequency');
+      .attr('transform', 'rotate(-90)')
+      .attr('y', 6)
+      .attr('dy', '0.71em')
+      .attr('text-anchor', 'end')
+      .text('Frequency');
 
     g.selectAll('.bar')
       .data(data)
       .enter().append('rect')
-        .attr('class', 'bar')
-        .attr('x', d => x(d.letter))
-        .attr('y', d => y(d.frequency))
-        .attr('width', x.bandwidth())
-        .attr('height', d => contentHeight - y(d.frequency));
+      .attr('class', 'bar')
+      .attr('x', d => x(d.letter))
+      .attr('y', d => y(d.frequency))
+      .attr('width', x.bandwidth())
+      .attr('height', d => contentHeight - y(d.frequency));
   }
 }

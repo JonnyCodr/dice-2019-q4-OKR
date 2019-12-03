@@ -21,4 +21,4 @@ artifacts:
     - "**/*.css"
     - "**/*.ico"
   discard-paths: yes
-  base-directory: "dist/demo-app"
+  base-directory: "dist/angular-d3"
