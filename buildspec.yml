@@ -18,7 +18,7 @@ phases:
   post_build:
     commands:
 #      - echo Post Build Phase
-      - aws s3 sync ./dist/angular-d3 s3://mmenard-dhi-okr-host-prod --delete
+      - aws s3 sync ./dist/dice-q4-okr s3://mmenard-dhi-okr-host-prod --delete
 
 artifacts:
   files:
