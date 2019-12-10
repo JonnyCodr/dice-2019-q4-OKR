@@ -1,46 +1,27 @@
-# Creating a responsive graph with Angular and D3
+# DiceQ4Okr
 
-## CodeBuild
-[intro to CodeBuild][1]
-[deploy to S3][3]
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
-- log into AWS [not as the root user] and goto `CodeBuild`
-- create a build project
-    - enter a `project name` which can be any arbitrary string
-    - enter `Description` _(optional)_
-    - build badge `![Build Status](https://codebuild.us-east-1.amazon.com/badges?uuid=...&branch=master)`
-    - Source 
-        - CodeCommit
-        - Github
-            - In order to have the build kick off when commits happen, click the `rebuild every time code change is pushed to the repository` in additional configuration
-            - select the branch to monitor e.g. master
-        - Bitbucket
-        - Github Enterprise
-        
-        - Environment
-            - managed image
-            - OS 
-            - Runtime
-            - Runtime Version
-    - BuildSpec
-        - create a buildspec.yml file in the root of your project
-    - Artifacts
-        - you can enable CodeBuild to output artifacts to an S3 bucket
-        - can include semantic versioning
-        - can zip artifacts with or without encription... the user is responsible of de-encripting and unzipping
-    - Logs
-        - cloudwatch
-            - add group name and stream name for querying
-    
+## Development server
 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## resources
-This repository goes with the following blog post:
-https://medium.com/@jeanphilippelemieux/creating-a-responsive-graph-with-angular-and-d3-b45bb8065588
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Running unit tests
 
-[1]: https://www.youtube.com/watch?v=jSXpmQ_au78
-[2]: https://www.youtube.com/watch?v=CbldTE7xGy8
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

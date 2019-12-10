@@ -9,7 +9,8 @@ import { DataModel } from 'src/app/data/data.model';
   styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnChanges {
-  @ViewChild('chart')
+
+  @ViewChild('chart', {static: false})
   private chartContainer: ElementRef;
 
   @Input()
@@ -25,7 +26,7 @@ export class BarChartComponent implements OnChanges {
     this.createChart();
   }
 
-  onResize(event) {
+  onResize($event: any) {
     this.createChart();
   }
 
@@ -80,4 +81,5 @@ export class BarChartComponent implements OnChanges {
       .attr('width', x.bandwidth())
       .attr('height', d => contentHeight - y(d.frequency));
   }
+
 }

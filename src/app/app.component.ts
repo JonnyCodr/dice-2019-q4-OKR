@@ -6,12 +6,14 @@ import { DataModel } from 'src/app/data/data.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   data: Observable<DataModel>;
 
   constructor(private http: HttpClient) {
-    this.data = this.http.get<DataModel>('./data.json');
+    this.data = this.http.get<DataModel>('./assets/data.json');
   }
+
 }
