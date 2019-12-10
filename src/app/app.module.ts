@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { BarChartComponent } from './components/charts/bar-chart/bar-chart.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material/material.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BarChartComponent
+    BarChartComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
