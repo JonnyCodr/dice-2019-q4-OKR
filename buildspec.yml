@@ -6,19 +6,19 @@ phases:
       nodejs: 10
     commands:
       - echo Install Phase
-#      - apt-get update
-#      - npm install -g @angular/cli
+      - apt-get update
+      - npm install -g @angular/cli
   pre_build:
     commands:
       - npm install
   build:
     commands:
-      - npm run build
-#      - ng build --prod --aot
+#      - npm run build
+      - ng build --prod --aot
   post_build:
     commands:
-      - echo Post Build Phase
-#      -aws s3 sync ./dist/angular-d3 d3://mmenard-dhi-okr-host-prod --delete
+#      - echo Post Build Phase
+      -aws s3 sync ./dist/angular-d3 s3://mmenard-dhi-okr-host-prod --delete
 
 artifacts:
   files:
