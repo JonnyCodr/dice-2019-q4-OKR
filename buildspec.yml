@@ -28,4 +28,4 @@ artifacts:
     - "**/*.ico"
     - "**/*.json"
   discard-paths: yes
-  base-directory: "dist/angular-d3"
+  base-directory: "dist/dice-q4-okr"
