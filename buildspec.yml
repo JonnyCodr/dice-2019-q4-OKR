@@ -4,6 +4,8 @@ phases:
   install:
     runtime-versions:
       nodejs: 10
+    commands:
+      - echo Install Phase
   pre_build:
     commands:
       - npm install
@@ -17,5 +19,6 @@ artifacts:
     - "**/*.js"
     - "**/*.css"
     - "**/*.ico"
+    - "**/*.json"
   discard-paths: yes
-  base-directory: "dist/demo-app"
+  base-directory: "dist/angular-d3"
