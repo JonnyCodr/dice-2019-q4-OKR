@@ -2,6 +2,7 @@
 
 ## CodeBuild
 [intro to CodeBuild][1]
+[deploy to S3][3]
 
 - log into AWS [not as the root user] and goto `CodeBuild`
 - create a build project
@@ -42,3 +43,4 @@ https://medium.com/@jeanphilippelemieux/creating-a-responsive-graph-with-angular
 
 
 [1]: https://www.youtube.com/watch?v=jSXpmQ_au78
+[2]: https://www.youtube.com/watch?v=CbldTE7xGy8
