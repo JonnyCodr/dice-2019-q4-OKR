@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { BarChartComponent } from './components/charts/bar-chart/bar-chart.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
