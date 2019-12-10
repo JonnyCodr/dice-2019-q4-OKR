@@ -6,7 +6,7 @@ phases:
       nodejs: 10
     commands:
       - echo Install Phase
-      - yum update
+      - apt-get update
       - npm install -g @angular/cli
   pre_build:
     commands:
